@@ -1,0 +1,118 @@
+/* General page styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Centered container box */
+.container {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+}
+
+/* Title */
+h1 {
+    font-size: 1.8rem;
+    color: #222;
+    margin-bottom: 25px;
+}
+
+/* Input and button styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+label {
+    font-weight: 500;
+    color: #333;
+}
+
+input[type="password"] {
+    width: 80%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="password"]:focus {
+    border-color: #2575fc;
+}
+
+/* Analyze button */
+button {
+    padding: 10px 25px;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #1a5fd1;
+    transform: scale(1.05);
+}
+
+/* Output sections */
+#result {
+    font-size: 1.1rem;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Strength color hints */
+#result:contains("Weak") {
+    color: #e74c3c;
+}
+
+#result:contains("Medium") {
+    color: #f39c12;
+}
+
+#result:contains("Strong") {
+    color: #27ae60;
+}
+
+#result:contains("Very Strong") {
+    color: #2ecc71;
+}
+
+#suggestions {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    text-align: left;
+    white-space: pre-line;
+    color: #555;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    input[type="password"] {
+        width: 100%;
+    }
+}
